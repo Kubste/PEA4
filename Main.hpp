@@ -21,7 +21,7 @@ private:
     int minutes;
     float a;
     float b;
-    int L0;
+    float p;
     int iterations;
     int upper_bound;
     int optimal_value;

@@ -9,28 +9,59 @@ void TSP::set_min_value() {
     for(auto & i : matrix) for(int j : i) if(j < min_value && j >= 0) min_value = j;
 }
 
-pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, int upper_bound) {
+pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, int upper_bound) {
     results.second = INT_MAX;
     if(upper_bound == 1) results = NN();
 
     init_pheromones();
 
     for(int i = 0; i < iterations; i++) {
-        vector<vector<int>> selected_paths(matrix.size(), vector<int>());
+        vector<vector<int>> paths(matrix.size(), vector<int>());
         vector<int> distances(matrix.size(), 0);
 
         for(int current_ant = 0; current_ant < matrix.size(); current_ant++) {
             vector<bool> visited_cities(matrix.size(), false);
-            int current_city = i;
-            selected_paths[current_ant].push_back(current_city);
+            int current_city = current_ant;
+            paths[current_ant].push_back(current_city);
             visited_cities[current_city] = true;
 
             for(int j = 0; j < matrix.size() - 1; j++) {
                 int next_city = choose_city(current_city, visited_cities, a, b);
+                if(next_city != -1) {
+                    paths[current_ant].push_back(next_city);
+                    //distances[current_ant] += matrix[current_city][next_city];
+                    visited_cities[next_city] = true;
+                    current_city = next_city;
+                }
+            }
+            paths[current_ant].push_back(paths[current_ant].front());
+            //distances[current_ant] += matrix[current_ant][paths[current_ant].front()];
+            distances[current_ant] = calculate_path_length(paths[current_ant]);
+        }
+        for(int j = 0; j < matrix.size(); j++) {
+            if(distances[j] < results.second) {
+                results.second = distances[j];
+                results.first = paths[j];
             }
         }
+        refresh_pheromones(p, paths, distances);
     }
     return results;
+}
+
+void TSP::refresh_pheromones(float p, vector<vector<int>> paths, vector<int> distances) {
+    for(int i = 0; i < matrix.size(); i++) {
+        for(int j = 0; j < matrix.size(); j++) {
+            pheromones[i][j] = pheromones[i][j] * p;
+            if(pheromones[i][j] == 0) pheromones[i][j] = numeric_limits<double>::min();
+        }
+    }
+
+    for(int i = 0; i < paths.size(); i++) {
+        for(int j = 0; j < paths[i].size() - 1; j++) {
+            pheromones[paths[i][j]][paths[i][j + 1]] += Q / distances[i];
+        }
+    }
 }
 
 int TSP::choose_city(int current_city, vector<bool> visited_cities, float a, float b) {
@@ -43,6 +74,7 @@ int TSP::choose_city(int current_city, vector<bool> visited_cities, float a, flo
     for(int i = 0; i < matrix.size(); i++) {
         if(!visited_cities[i]) {
             probabilities[i] = pow(pheromones[current_city][i], a) * pow(1.0 / matrix[current_city][i], b);
+            if(probabilities[i] == 0) probabilities[i] = numeric_limits<double>::min();
             sum += probabilities[i];
         }
     }

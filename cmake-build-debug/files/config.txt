@@ -3,7 +3,8 @@
 Maksymalny czas przeszukiwania (-1 -> brak ograniczenia)# 15
 Wartość parametru a# 1.0
 Wartość parametru b# 2.0
-Liczba iteracji # 10000
+Wartość parametru p# 0.5
+Liczba iteracji # 100000
 Czy zastosować ograniczenie górne wyznaczone za pomocą algorytmu NN 0 - nie 1 - tak# 0
 Liczba powtorzeń przeszukiwania instancji# 10
 Wyświetlanie wskaźnika postępu 0 - wyłączone 1 - włączone# 0

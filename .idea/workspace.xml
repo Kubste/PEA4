@@ -21,16 +21,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e03a0f99-d37a-4568-b5d9-64ce67c7b269" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/File_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/File_manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Main.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSP.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSP.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/Main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/Main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +86,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -97,6 +97,9 @@
       <updated>1735856893530</updated>
       <workItem from="1735856894939" duration="3008000" />
       <workItem from="1735862214133" duration="5034000" />
+      <workItem from="1735867421945" duration="3000" />
+      <workItem from="1735913928422" duration="3277000" />
+      <workItem from="1735919382666" duration="5218000" />
     </task>
     <servers />
   </component>
@@ -107,5 +110,16 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/TSP.cpp</url>
+          <line>92</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

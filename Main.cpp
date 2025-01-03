@@ -25,7 +25,7 @@ void Main::run() {
 
     for(int i = 0; i < repetitions; i++) {
         t0 = chrono::high_resolution_clock::now();
-        results = tsp.ACO(iterations, a, b, upper_bound);
+        results = tsp.ACO(iterations, a, b, p, upper_bound);
         time = chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - t0);
         print_partial_results(results, i + 1, time);
     }
@@ -47,6 +47,7 @@ void Main::assign_parameters(vector<string> parameters_string, vector<int> param
     progress_indicator = parameters_int[4];
     a = parameters_float[0];
     b = parameters_float[1];
+    p = parameters_float[2];
 }
 
 void Main::print_info() {

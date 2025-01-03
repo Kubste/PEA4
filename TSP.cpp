@@ -9,10 +9,63 @@ void TSP::set_min_value() {
     for(auto & i : matrix) for(int j : i) if(j < min_value && j >= 0) min_value = j;
 }
 
-pair<vector<int>, int> TSP::ACO() {
+pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, int upper_bound) {
+    results.second = INT_MAX;
+    if(upper_bound == 1) results = NN();
 
+    init_pheromones();
 
+    for(int i = 0; i < iterations; i++) {
+        vector<vector<int>> selected_paths(matrix.size(), vector<int>());
+        vector<int> distances(matrix.size(), 0);
+
+        for(int current_ant = 0; current_ant < matrix.size(); current_ant++) {
+            vector<bool> visited_cities(matrix.size(), false);
+            int current_city = i;
+            selected_paths[current_ant].push_back(current_city);
+            visited_cities[current_city] = true;
+
+            for(int j = 0; j < matrix.size() - 1; j++) {
+                int next_city = choose_city(current_city, visited_cities, a, b);
+            }
+        }
+    }
     return results;
+}
+
+int TSP::choose_city(int current_city, vector<bool> visited_cities, float a, float b) {
+    static mt19937 rng(static_cast<unsigned>(chrono::system_clock::now().time_since_epoch().count()));
+    uniform_real_distribution<> distribution(0.0, 1.0);
+
+    vector<double> probabilities(matrix.size(), 0.0);
+    double sum = 0.0;
+
+    for(int i = 0; i < matrix.size(); i++) {
+        if(!visited_cities[i]) {
+            probabilities[i] = pow(pheromones[current_city][i], a) * pow(1.0 / matrix[current_city][i], b);
+            sum += probabilities[i];
+        }
+    }
+
+    for(double & probability : probabilities) probability = probability / sum;
+
+    double random_number = distribution(rng);
+    double sum_probability = 0.0;
+
+    for(int i = 0; i < matrix.size(); i++) {
+        if(!visited_cities[i]) {
+            sum_probability += probabilities[i];
+            if(sum_probability >= random_number) return i;
+        }
+    }
+    return -1;
+}
+
+void TSP::init_pheromones() {
+    for(int i = 0; i < matrix.size(); i++) {
+        pheromones.emplace_back();
+        for(int j = 0; j < matrix.size(); j++) pheromones[i].push_back(0.25);
+    }
 }
 
 pair<vector<int>, int> TSP::random() {

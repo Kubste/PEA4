@@ -25,7 +25,7 @@ void Main::run() {
 
     for(int i = 0; i < repetitions; i++) {
         t0 = chrono::high_resolution_clock::now();
-        results = tsp.ACO();
+        results = tsp.ACO(iterations, a, b, upper_bound);
         time = chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - t0);
         print_partial_results(results, i + 1, time);
     }
@@ -41,7 +41,7 @@ void Main::assign_parameters(vector<string> parameters_string, vector<int> param
     result_path = parameters_string[1];
     if(parameters_int[0] == -1) minutes = INT_MAX;
     else minutes = parameters_int[0];
-    max_iterations = parameters_int[1];
+    iterations = parameters_int[1];
     upper_bound = parameters_int[2];
     repetitions = parameters_int[3];
     progress_indicator = parameters_int[4];

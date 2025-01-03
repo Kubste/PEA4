@@ -22,7 +22,7 @@ private:
     float a;
     float b;
     int L0;
-    int max_iterations;
+    int iterations;
     int upper_bound;
     int optimal_value;
     int progress_indicator;

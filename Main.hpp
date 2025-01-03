@@ -22,8 +22,10 @@ private:
     float a;
     float b;
     float p;
+    float Q;
     int iterations;
     int upper_bound;
+    int alg_type;
     int optimal_value;
     int progress_indicator;
     int repetitions;

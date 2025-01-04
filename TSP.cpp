@@ -9,13 +9,15 @@ void TSP::set_min_value() {
     for(auto & i : matrix) for(int j : i) if(j < min_value && j >= 0) min_value = j;
 }
 
-pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, float Q, int alg_type, int upper_bound) {
+pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, float Q, int alg_type, int upper_bound, int minutes, int optimal_value) {
+    chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
     results.second = INT_MAX;
     if(upper_bound == 1) results = NN();
 
     init_pheromones();
 
     for(int i = 0; i < iterations; i++) {
+        if(chrono::duration_cast<chrono::minutes>(chrono::steady_clock::now() - start).count() == minutes || results.second == optimal_value) return results;
         vector<vector<int>> paths(matrix.size(), vector<int>());
         vector<int> distances(matrix.size(), 0);
 

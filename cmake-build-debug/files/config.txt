@@ -1,11 +1,11 @@
-Ścieżka pliku wejściowego# data65a.txt
+Ścieżka pliku wejściowego# data20a.txt
 Ścieżak pliku wyjściowego# results.csv
 Maksymalny czas przeszukiwania (-1 -> brak ograniczenia)# 15
 Wartość parametru a# 1.0
 Wartość parametru b# 2.0
 Wartość parametru p# 0.5
-Stała wartość feromonu# 1.0
-Algorytm aktualizacji feromonu (1 - CAS, 2 - DAS, 3 - QAS)# 3
+Stała wartość feromonu# 200.0
+Algorytm aktualizacji feromonu (1 - CAS, 2 - DAS, 3 - QAS)# 1
 Liczba iteracji# 10000
 Czy zastosować ograniczenie górne wyznaczone za pomocą algorytmu NN 0 - nie 1 - tak# 0
 Liczba powtorzeń przeszukiwania instancji# 10

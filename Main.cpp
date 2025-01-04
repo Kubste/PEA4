@@ -25,7 +25,7 @@ void Main::run() {
 
     for(int i = 0; i < repetitions; i++) {
         t0 = chrono::high_resolution_clock::now();
-        results = tsp.ACO(iterations, a, b, p, Q, alg_type, upper_bound);
+        results = tsp.ACO(iterations, a, b, p, Q, alg_type, upper_bound, minutes, optimal_value);
         time = chrono::duration_cast<chrono::microseconds>(chrono::high_resolution_clock::now() - t0);
         print_partial_results(results, i + 1, time);
     }

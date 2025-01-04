@@ -22,17 +22,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e03a0f99-d37a-4568-b5d9-64ce67c7b269" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/File_manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/File_manager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/Main.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSP.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TSP.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/data29.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/data29a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +97,7 @@
       <workItem from="1735913928422" duration="3277000" />
       <workItem from="1735919382666" duration="5218000" />
       <workItem from="1735929238174" duration="10425000" />
+      <workItem from="1735949566516" duration="4021000" />
     </task>
     <servers />
   </component>
@@ -109,16 +108,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Main.cpp</url>
-          <line>38</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

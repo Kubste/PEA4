@@ -23,7 +23,7 @@ public:
     void set_matrix(vector<vector<int>> matrix);
     pair<vector<int>, int> NN();
     void explore_paths(vector<int> path, int path_length, vector<int> Q, int current_node, int start_node, pair<vector<int>, int> &resultsNN);
-    pair<vector<int>, int> ACO(int iterations, float a, float b, float p, float Q, int alg_type, int upper_bound);
+    pair<vector<int>, int> ACO(int iterations, float a, float b, float p, float Q, int alg_type, int upper_bound, int minutes, int optimal_value);
 
 private:
     vector<vector<int>> matrix;

@@ -14,10 +14,18 @@ pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, float
     results.second = INT_MAX;
     if(upper_bound == 1) results = NN();
 
+    int current_best_length = results.second;
+    int iterations_counter = iterations;
+
     init_pheromones();
 
-    for(int i = 0; i < iterations; i++) {
-        if(chrono::duration_cast<chrono::minutes>(chrono::steady_clock::now() - start).count() == minutes || results.second == optimal_value) return results;
+    while(chrono::duration_cast<chrono::minutes>(chrono::steady_clock::now() - start).count() < minutes) {
+        if(results.second == optimal_value || iterations_counter < 0) return results;
+        if(current_best_length == results.second) iterations_counter--;
+        else {
+            current_best_length = results.second;
+            iterations_counter = iterations;
+        }
         vector<vector<int>> paths(matrix.size(), vector<int>());
         vector<int> distances(matrix.size(), 0);
 
@@ -29,15 +37,12 @@ pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, float
 
             for(int j = 0; j < matrix.size() - 1; j++) {
                 int next_city = choose_city(current_city, visited_cities, a, b);
-                if(next_city != -1) {
-                    paths[current_ant].push_back(next_city);
-                    //distances[current_ant] += matrix[current_city][next_city];
-                    visited_cities[next_city] = true;
-                    current_city = next_city;
-                }
+                paths[current_ant].push_back(next_city);
+                visited_cities[next_city] = true;
+                current_city = next_city;
             }
+
             paths[current_ant].push_back(paths[current_ant].front());
-            //distances[current_ant] += matrix[current_ant][paths[current_ant].front()];
             distances[current_ant] = calculate_path_length(paths[current_ant]);
             refresh_pheromones(Q, paths[current_ant], distances[current_ant], alg_type);
         }
@@ -48,7 +53,6 @@ pair<vector<int>, int> TSP::ACO(int iterations, float a, float b, float p, float
             }
         }
         evaporate_pheromone(p);
-        //refresh_pheromones(Q, paths, distances);
     }
     return results;
 }
@@ -61,14 +65,6 @@ void TSP::evaporate_pheromone(float p) {
         }
     }
 }
-
-//void TSP::refresh_pheromones(float p, float Q, vector<vector<int>> paths, vector<int> distances) {
-//    for(int i = 0; i < paths.size(); i++) {
-//        for(int j = 0; j < paths[i].size() - 1; j++) {
-//            pheromones[paths[i][j]][paths[i][j + 1]] += Q / distances[i];
-//        }
-//    }
-//}
 
 void TSP::refresh_pheromones(float Q, vector<int> path, int distance, int type) {
     if(type == 1) for(int i = 0; i < path.size() - 1; i++) pheromones[path[i]][path[i + 1]] += Q / distance;

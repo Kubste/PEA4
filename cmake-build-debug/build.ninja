@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_PEAProjekt4: phony || CMakeFiles/PEAProj
 
 build CMakeFiles/PEAProjekt4.dir/Main.cpp.obj: CXX_COMPILER__PEAProjekt4_unscanned_Debug C$:/Users/jakub/OneDrive/Pulpit/PEAProjekt4/Main.cpp || cmake_object_order_depends_target_PEAProjekt4
   DEP_FILE = CMakeFiles\PEAProjekt4.dir\Main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++11 -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PEAProjekt4.dir
   OBJECT_FILE_DIR = CMakeFiles\PEAProjekt4.dir
 
 build CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj: CXX_COMPILER__PEAProjekt4_unscanned_Debug C$:/Users/jakub/OneDrive/Pulpit/PEAProjekt4/TSP.cpp || cmake_object_order_depends_target_PEAProjekt4
   DEP_FILE = CMakeFiles\PEAProjekt4.dir\TSP.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++11 -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PEAProjekt4.dir
   OBJECT_FILE_DIR = CMakeFiles\PEAProjekt4.dir
 
 build CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj: CXX_COMPILER__PEAProjekt4_unscanned_Debug C$:/Users/jakub/OneDrive/Pulpit/PEAProjekt4/File_manager.cpp || cmake_object_order_depends_target_PEAProjekt4
   DEP_FILE = CMakeFiles\PEAProjekt4.dir\File_manager.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++11 -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\PEAProjekt4.dir
   OBJECT_FILE_DIR = CMakeFiles\PEAProjekt4.dir
 
@@ -76,7 +76,8 @@ build CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj: CXX_COMPILER__PEAProjekt4
 # Link the executable PEAProjekt4.exe
 
 build PEAProjekt4.exe: CXX_EXECUTABLE_LINKER__PEAProjekt4_Debug CMakeFiles/PEAProjekt4.dir/Main.cpp.obj CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj
-  FLAGS = -g
+  FLAGS = -O0 -std=c++11 -g
+  LINK_FLAGS = -static -static-libgcc -static-libstdc++
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PEAProjekt4.dir
   POST_BUILD = cd .

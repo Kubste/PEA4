@@ -22,12 +22,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e03a0f99-d37a-4568-b5d9-64ce67c7b269" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TSP.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TSP.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-5e8b68cbb67c06b5a498.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-01-02T22-30-37-0134.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-PEAProjekt4-Debug-37cfdc877e48fe527773.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/File_manager.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/Main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/Main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PEAProjekt4.dir/TSP.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PEAProjekt4.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/config.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/files/results.csv" afterDir="false" />
     </list>
@@ -99,6 +106,14 @@
       <workItem from="1736041345897" duration="3807000" />
       <workItem from="1736274637730" duration="13000" />
       <workItem from="1736293432459" duration="41000" />
+      <workItem from="1736293894382" duration="75000" />
+      <workItem from="1736294310037" duration="32000" />
+      <workItem from="1736375305936" duration="101000" />
+      <workItem from="1736375487511" duration="15000" />
+      <workItem from="1736375996865" duration="441000" />
+      <workItem from="1736545811741" duration="28000" />
+      <workItem from="1736606175601" duration="2680000" />
+      <workItem from="1736701355305" duration="5000" />
     </task>
     <servers />
   </component>

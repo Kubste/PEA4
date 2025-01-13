@@ -1,17 +1,12 @@
-Nazwa instancji,data65a.txt
-Wynik optymalny,1839
-Sredni czas wykonania,5.14063e+07
-Sredni blad bezwzgledny,70.5
-Sredni blad wzgledny,0.038336
-Sredni blad wzgledny(w procentach),3.83361%
+Nazwa instancji,data29a.txt
+Wynik optymalny,2020
+Sredni czas wykonania,1.00482e+07
+Sredni blad bezwzgledny,0
+Sredni blad wzgledny,0
+Sredni blad wzgledny(w procentach),0%
 Numer proby,Czas wykonania
-1,9.5841e+07
-2,4.92914e+07
-3,6.03875e+07
-4,3.75785e+07
-5,5.82666e+07
-6,5.3238e+07
-7,3.92284e+07
-8,4.33786e+07
-9,3.39074e+07
-10,4.29455e+07
+1,2.1621e+06
+2,199439
+3,20546
+4,1.99466e+07
+5,2.79124e+07
